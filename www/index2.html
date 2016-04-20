@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="angular-ui-router.js"></script>
+  <script>
+    var myApp = angular.module('myApp', ['ui.router']);
+
+    angular.module("myApp", [])
+        .directive("myDirective", function () {
+          return {
+            restrict: "A",
+            scope: {
+              text: "@myText",
+              twoWayBind: "=myTwoWayBind",
+              oneWayBind: "&myOneWayBind"
+            }
+          };
+        }).controller("myController", function ($scope) {
+      $scope.foo = {name: "Umur"};
+      $scope.bar = "qwe";
+    });
+
+  </script>
+</head>
+<body>
+test
+<div ng-controller="myController">
+  <div my-directive
+       my-text="hello {{ bar }}"
+       my-two-way-bind="foo"
+       my-one-way-bind="bar">
+    test2mmmrrr
+  </div>
+</div>
+</body>
+</html>

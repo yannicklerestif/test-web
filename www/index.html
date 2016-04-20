@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <script>
+    function applyIfNecessary(toCall, arg1, arg2) {
+      toCall(arg1, arg2);
+    }
+    applyIfNecessary(function(arg1, arg2) {
+      console.log('arg1 : ' + arg1 + ' - arg2 : ' + arg2);
+    }, 123);
+  </script>
+</head>
+<body>
+</body>
+</html>
