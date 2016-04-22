@@ -10,7 +10,7 @@ gulp.task('serve', function () {
 		server: 'www'
 	});
 
-	gulp.watch(['www'], reload);
+	gulp.watch(['www/**/*'], reload);
 	//gulp.watch(['www/**/*.html'], reload);
 	//gulp.watch(['www/css/**/*.css'], reload);
 	//gulp.watch(['www/js/**/*.js'], reload);
