@@ -2,14 +2,13 @@
 <html ng-app="myApp">
 <head>
   <script>
-    function applyIfNecessary(toCall, arg1, arg2) {
-      toCall(arg1, arg2);
+    function someFunction(arg1, arg2) {
+      console.log('someFunction : ' + arg1 + ', ' + arg2);
     }
-    applyIfNecessary(function(arg1, arg2) {
-      console.log('arg1 : ' + arg1 + ' - arg2 : ' + arg2);
-    }, 123);
+    someFunction(1, 2);
   </script>
 </head>
 <body>
+aaaccdddeeeccckkkèèè
 </body>
 </html>
