@@ -1,0 +1,21 @@
+{
+  "name": "test-web",
+  "description": "",
+  "main": "",
+  "authors": [
+    "yannick <yannick1976.git@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3"
+  }
+}
