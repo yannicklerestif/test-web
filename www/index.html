@@ -2,18 +2,8 @@
 <html ng-app="myApp">
 <head>
   <script>
-    function substring(containing, contained) {
-      containedLoop:
-      for(var i=0; i<containing.length - contained.length - 1; i++) {
-        for(var j=0; j<contained.length - 1; j++) {
-          if(containing[i + j] != contained[j])
-            continue containedLoop;
-        }
-        return i;
-      }
-      return -1;
-    }
-    console.log(substring("abcdefghij", "fghk"));
+    var test = "test";
+    console.log(test || "abcd");
   </script>
 </head>
 <body>
