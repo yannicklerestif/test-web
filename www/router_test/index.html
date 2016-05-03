@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-ui-router.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ui.router']);
+        app.config(function($stateProvider, $urlRouterProvider) {
+            $stateProvider
+                    .state('start', {
+                        url: '/start',
+                        templateUrl: 'partials/start.html'
+                    })
+        });
+        app.controller("DemoController", function() {
+            console.log("starting demo controller");
+        });
+    </script>
+    <script type="text/ng-template" id="partials/start.html">
+        Hello, World !
+    </script>
+</head>
+<body>
+<div ng-controller="DemoController">
+    <div ui-view></div>
+</div>
+
+</body>
+</html>
