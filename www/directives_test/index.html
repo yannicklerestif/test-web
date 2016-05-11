@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="AngularTemplateQuickApp">
+<head>
+  <title>Angular Template Quick App</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>-->
+  <!--useful for ide integration-->
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+          integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <script src="../lib/angular.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+        integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+          integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+          crossorigin="anonymous"></script>
+  <script>
+    angular.module('AngularTemplateQuickApp', []);
+    angular
+        .module('AngularTemplateQuickApp')
+        .factory('TestService', function TestService($q, $timeout) {
+              var service = {
+                someField: 'someValue in test service',
+                someMethod: someMethod
+              };
+
+              var somePrivateField;
+
+              return service;
+
+              ////////////
+
+              function someMethod(someParam) {
+                $timeout(function () {
+                  console.log('test');
+                }, 1000);
+              }
+            }
+        );
+    angular
+        .module('AngularTemplateQuickApp')
+        .controller(
+            "TestCtrl", function ($scope, TestService) {
+              var vm = this;
+              vm.somePublicField = "some public value";
+              vm.TestService = TestService;
+              vm.somePublicMethod = function () {
+                $scope.$broadcast('some_event', 'some arg');
+                $scope.$apply(function () {
+                  console.log('applying...');
+                })
+              };
+              $scope.testService = TestService;
+
+              $scope.$on('some_event', function (event, arg) {
+                console.log('some_event triggered with arg : ' + arg);
+              });
+
+            });
+    angular
+        .module('AngularTemplateQuickApp')
+        .directive(
+            "timerDirective", function () {
+              return {
+                link: function (scope, elem) {
+                  elem.html("<span style=\"color: red\">some text</span>");
+                  elem.click(
+                      function () {
+                        console.log(new Date() + ' element id is : ' + elem.attr('id'));
+                        console.log(scope.testService.someField);
+                      }
+                  );
+                }
+              }
+            });
+  </script>
+</head>
+<body ng-controller="TestCtrl as testCtrl">
+<div timer-directive id="my-directive-id"></div>
+</body>
+</html>
