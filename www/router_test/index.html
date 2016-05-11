@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../lib/angular.js"></script>
-    <script src="../lib/angular-route.js"></script>
-    <script>
-        var app = angular.module('myApp', ['ngRoute']);
-        app.config(function ($routeProvider) {
-            $routeProvider
-                    .when('/home', {
-                        templateUrl: '/partials/home.html',
-                        controller: 'HomeCtrl as home'
-                    })
-                    .when('/about', {
-                        templateUrl: '/partials/about.html',
-                        controller: 'AboutCtrl'
-                    })
-                    .otherwise({
-                        redirectTo: '/home'
-                    })
-        });
-        app.controller("DemoCtrl", function () {
-            console.log("starting demo controller");
-        });
-        app.controller("HomeCtrl", function () {
-            console.log("starting home controller");
-            var vm = this;
-            vm.someText = new Date() + '';
-        });
-        app.controller("AboutCtrl", function () {
-            console.log("starting about controller");
-        });
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../lib/angular.js"></script>
+  <script src="../lib/angular-route.js"></script>
+  <script>
+    var app = angular.module('myApp', ['ngRoute']);
+    app.config(function ($routeProvider) {
+      $routeProvider
+          .when('/home', {
+            templateUrl: '/partials/home.html',
+            controller: 'HomeCtrl as home'
+          })
+          .when('/about', {
+            templateUrl: '/partials/about.html',
+            controller: 'AboutCtrl as about'
+          })
+          .otherwise({
+            redirectTo: '/home'
+          })
+    });
+    app.controller("DemoCtrl", function ($scope) {
+      $scope.someVarInDemoCtrl = "Some var value in demo controller";
+      console.log("starting demo controller");
+    });
+    app.controller("HomeCtrl", function () {
+      console.log("starting home controller");
+      var vm = this;
+      vm.someText = new Date() + '';
+    });
+    app.controller("AboutCtrl", function ($routeParams) {
+      var vm = this;
+      vm.someParamPassedInUrl = $routeParams.someParam;
+      console.log("starting about controller");
+    });
 
-    </script>
-    <script type="text/ng-template" id="/partials/home.html">
-        Home controller contains this text : {{home.someText}}
-    </script>
-    <script type="text/ng-template" id="/partials/about.html">
-        <div class="jumbotron text-center">
-            <h1>The Homey Page</h1>
-            <p>This page demonstrates ng router usage.</p>
-        </div>
-    </script>
+  </script>
+  <script type="text/ng-template" id="/partials/home.html">
+    Home controller contains this text : {{home.someText}}<br>
+    This comes from parent controller : {{someVarInDemoCtrl}}
+  </script>
+  <script type="text/ng-template" id="/partials/about.html">
+    <div class="jumbotron text-center">
+      <h1>The Homey Page</h1>
+      <p>This page demonstrates ng router usage.</p>
+      <p>This value was passed in page url : {{about.someParamPassedInUrl}}</p>
+    </div>
+  </script>
 </head>
 <body ng-controller="DemoCtrl">
 <nav class="navbar navbar-inverse" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">AngularUI Router</a>
-    </div>
-    <ul class="nav navbar-nav">
-        <li><a href="#/home">Home</a></li>
-        <li><a href="#/about">About</a></li>
-    </ul>
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">AngularUI Router</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><a href="#/home">Home</a></li>
+    <li><a href="#/about">About</a></li>
+  </ul>
 </nav>
 
 <!-- MAIN CONTENT -->
 <div class="container">
-
-    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-    <div ng-view></div>
+  Use <a href="#/about?someParam=12345">this link</a> to pass a parameter to about page
+  <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+  <div ng-view></div>
 
 </div>
 
