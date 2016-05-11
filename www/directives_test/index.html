@@ -62,12 +62,13 @@
         .directive(
             "timerDirective", function () {
               return {
-                link: function (scope, elem) {
+                link: function (scope, elem, attrs) {
                   elem.html("<span style=\"color: red\">some text</span>");
                   elem.click(
                       function () {
                         console.log(new Date() + ' element id is : ' + elem.attr('id'));
                         console.log(scope.testService.someField);
+                        console.log("some attribute : " + attrs.someAttr);
                       }
                   );
                 }
@@ -76,6 +77,6 @@
   </script>
 </head>
 <body ng-controller="TestCtrl as testCtrl">
-<div timer-directive id="my-directive-id"></div>
+<div timer-directive id="my-directive-id" some-attr="some attribute value"></div>
 </body>
 </html>
