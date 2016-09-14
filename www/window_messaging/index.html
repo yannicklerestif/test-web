@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        function openWindowAndSendMessages() {
+            var newWindow = window.open("new_window.html");
+            window.setInterval(function() {
+               newWindow.postMessage("some message", "*");
+            }, 2000);
+        }
+    </script>
 </head>
 <body>
-
+    <button onclick="openWindowAndSendMessages()">OPEN A NEW WINDOW</button>
 </body>
 </html>

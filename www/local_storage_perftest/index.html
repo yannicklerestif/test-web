@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        window.localStorage['test'] = 1;
+        var sum = 0;
+        var start = Date.now();
+        for(var i = 0; i<1000000; i++) {
+            sum += parseInt(window.localStorage['test']);
+        }
+        var end = Date.now();
+        console.log(end - start);
+        console.log(sum);
+    </script>
 </head>
 <body>
 

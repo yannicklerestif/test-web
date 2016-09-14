@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+</head>
+<body ng-app="myApp" ng-controller="DemoCtrl as ctrl">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script>
+    var app = angular.module('myApp', ['ngMaterial']);
+    app.controller("DemoCtrl", function ($scope) {
+        var that = this;
+        that.test = 'test';
+        that.hours = [];
+        for (var i = 0; i < 24; i++) {
+            that.hours.push(i);
+        }
+        $scope.someVarInDemoCtrl = "Some var value in demo controller";
+        console.log("starting demo controller");
+    });
+</script>
+
+<div layout="row" layout-align="end end">
+    <div flex="20">
+        <md-datepicker name="startDate" ng-model="ctrl.date" ng-required="true">
+        </md-datepicker>
+    </div>
+    <div flex="20">
+        <md-icon>alarm</md-icon>
+    </div>
+    <div flex="20">
+        <md-select ng-model="ctrl.hour">
+            <md-option ng-repeat="hour in ctrl.hours" ng-value="hour">
+                {{hour + ':00'}}
+            </md-option>
+        </md-select>
+    </div>
+
+
+</div>
+</body>
+</html>
