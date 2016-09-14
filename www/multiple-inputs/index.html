@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body ng-app="myApp" ng-controller="DemoCtrl as ctrl">
 
@@ -21,6 +21,7 @@
         var that = this;
         that.test = 'test';
         that.hours = [];
+        that.dateModel = new Date();
         for (var i = 0; i < 24; i++) {
             that.hours.push(i);
         }
@@ -35,32 +36,26 @@
                 var part = attrs.part;
                 var modelToUser, userToModel
                 console.log('part:', part);
-                if (part == 'year') {
+                if (part == 'date') {
                     modelToUser = function(date) {
-                        return date.getFullYear();
+                        return date;
                     }
-                    userToModel = function(year) {
-                        ngModel.$modelValue.setYear(year);
+                    userToModel = function(date) {
+                        ngModel.$modelValue.setFullYear(date.getFullYear());
+                        ngModel.$modelValue.setMonth(date.getMonth());
+                        ngModel.$modelValue.setDate(date.getDate());
                         return ngModel.$modelValue
                     }
                 }
-                else if (part == 'month') {
+                else if (part == 'hour') {
                     modelToUser = function(date) {
-                        return date.getMonth();
+                        console.log(date);
+                        return date.getHours();
                     }
-                    userToModel = function(month) {
-                        ngModel.$modelValue.setMonth(month);
+                    userToModel = function(hour) {
+                        ngModel.$modelValue.setHours(hour);
                         return ngModel.$modelValue;
                     }
-                }
-                else if (part == 'day') {
-                    modelToUser = function(date) {
-                        return date.getUTCDate();
-                    };
-                    userToModel = function(day) {
-                        ngModel.$modelValue.setUTCDate(day);
-                        return ngModel.$modelValue;
-                    };
                 }
                 ngModel.$formatters.push(modelToUser);
                 ngModel.$parsers.push(userToModel);
@@ -68,24 +63,25 @@
         }
     })
 </script>
-
-<div layout="row" layout-align="end end">
-    <div flex="20">
-        <md-datepicker name="startDate" ng-model="ctrl.date" ng-required="true">
-        </md-datepicker>
+<div layout="column">
+    <div>{{ctrl.dateModel}}</div>
+    <div layout="row" layout-align="start center">
+        <div>
+            <md-datepicker name="startDate" ng-model="ctrl.dateModel" ng-required="true"
+                date-part-input part="date">
+            </md-datepicker>
+        </div>
+        <div>
+            <md-icon>alarm</md-icon>
+        </div>
+        <div>
+            <md-select ng-model="ctrl.dateModel" date-part-input part="hour">
+                <md-option ng-repeat="hour in ctrl.hours" ng-value="hour">
+                    {{hour + ':00'}}
+                </md-option>
+            </md-select>
+        </div>
     </div>
-    <div flex="20">
-        <md-icon>alarm</md-icon>
-    </div>
-    <div flex="20">
-        <md-select ng-model="ctrl.hour">
-            <md-option ng-repeat="hour in ctrl.hours" ng-value="hour">
-                {{hour + ':00'}}
-            </md-option>
-        </md-select>
-    </div>
-
-
 </div>
 </body>
 </html>
