@@ -35,6 +35,24 @@
             templateUrl: '/partials/about.html',
             controller: 'AboutCtrl as about'
           })
+          .state('multi-view', {
+            url: '/multi-view',
+            views: {
+
+              // the main template will be placed here (relatively named)
+              '': { templateUrl: '/partials/multi-view.html' },
+
+              // the child views will be defined here (absolutely named)
+              'columnOne@multi-view': { template: 'Look I am a column!' },
+
+              // for column two, we'll define a separate controller
+              'columnTwo@multi-view': {
+                templateUrl: '/partials/table-data.html',
+                controller: 'scotchController'
+              }
+            }
+
+          });
     });
     app.controller("DemoCtrl", function ($scope) {
       $scope.someVarInDemoCtrl = "Some var value in demo controller";
@@ -50,9 +68,24 @@
       vm.someNormalParameter = 'This is a normal parameter';
       //vm.someParamPassedInUrl = $routeParams.someParam;
       console.log("starting about controller");
-
     });
-
+    app.controller('scotchController', function($scope) {
+      $scope.message = 'test';
+      $scope.scotches = [
+        {
+          name: 'Macallan 12',
+          price: 50
+        },
+        {
+          name: 'Chivas Regal Royal Salute',
+          price: 10000
+        },
+        {
+          name: 'Glenfiddich 1937',
+          price: 20000
+        }
+      ];
+    });
   </script>
   <script type="text/ng-template" id="/partials/home.html">
     Home controller contains this text : {{home.someText}}<br>
@@ -62,6 +95,11 @@
     <a ui-sref=".paragraph" class="btn btn-danger">Paragraph</a>
     <div ui-view></div>
   </script>
+  <script type="text/ng-template" id="/partial-home-list.html">
+    <ul>
+      <li ng-repeat="dog in dogs">{{ dog }}</li>
+    </ul>
+  </script>
   <script type="text/ng-template" id="/partials/about.html">
     <div class="jumbotron text-center">
       <h1>The Homey Page</h1>
@@ -70,10 +108,38 @@
       <p>This value was passed in page url : {{about.someParamPassedInUrl}}</p>
     </div>
   </script>
-  <script type="text/ng-template" id="/partial-home-list.html">
-    <ul>
-      <li ng-repeat="dog in dogs">{{ dog }}</li>
-    </ul>
+  <script type="text/ng-template" id="/partials/multi-view.html">
+    <div class="jumbotron text-center">
+      <h1>The About Page</h1>
+      <p>This page demonstrates <span class="text-danger">multiple</span> and <span class="text-danger">named</span> views.</p>
+    </div>
+    <div class="row">
+      <!-- COLUMN ONE NAMED VIEW -->
+      <div class="col-sm-6">
+        <div ui-view="columnOne"></div>
+      </div>
+      <!-- COLUMN TWO NAMED VIEW -->
+      <div class="col-sm-6">
+        <div ui-view="columnTwo"></div>
+      </div>
+    </div>
+  </script>
+  <script type="text/ng-template" id="/partials/table-data.html">
+    <h2>Fine Scotches</h2>
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+      <tr>
+        <td>Name</td>
+        <td>Cost</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="scotch in scotches">
+        <td>{{ scotch.name }}</td>
+        <td>${{ scotch.price }}</td>
+      </tr>
+      </tbody>
+    </table>
   </script>
 </head>
 <body ng-controller="DemoCtrl">
@@ -84,12 +150,13 @@
   <ul class="nav navbar-nav">
     <li><a ui-sref="home">Home</a></li>
     <li><a ui-sref="about">About</a></li>
+    <li><a ui-sref="multi-view">Multi-View</a></li>
   </ul>
 </nav>
 
 <!-- MAIN CONTENT -->
 <div class="container">
-  Use <a href="about?someParam=12345">this link</a> to pass a parameter to about page
+  Use <a ui-sref="about?someParam=12345">this link</a> to pass a parameter to about page
   <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
   <div ui-view></div>
 
