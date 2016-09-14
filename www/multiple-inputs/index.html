@@ -27,6 +27,46 @@
         $scope.someVarInDemoCtrl = "Some var value in demo controller";
         console.log("starting demo controller");
     });
+    app.directive('datePartInput', function() {
+        return {
+            restrict: 'A',
+            require: 'ngModel',
+            link: function(scope, elem, attrs, ngModel) {
+                var part = attrs.part;
+                var modelToUser, userToModel
+                console.log('part:', part);
+                if (part == 'year') {
+                    modelToUser = function(date) {
+                        return date.getFullYear();
+                    }
+                    userToModel = function(year) {
+                        ngModel.$modelValue.setYear(year);
+                        return ngModel.$modelValue
+                    }
+                }
+                else if (part == 'month') {
+                    modelToUser = function(date) {
+                        return date.getMonth();
+                    }
+                    userToModel = function(month) {
+                        ngModel.$modelValue.setMonth(month);
+                        return ngModel.$modelValue;
+                    }
+                }
+                else if (part == 'day') {
+                    modelToUser = function(date) {
+                        return date.getUTCDate();
+                    };
+                    userToModel = function(day) {
+                        ngModel.$modelValue.setUTCDate(day);
+                        return ngModel.$modelValue;
+                    };
+                }
+                ngModel.$formatters.push(modelToUser);
+                ngModel.$parsers.push(userToModel);
+            }
+        }
+    })
 </script>
 
 <div layout="row" layout-align="end end">
