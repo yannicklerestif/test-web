@@ -1,0 +1,178 @@
+{
+  "Scope": {
+    "PartnerId": 2603,
+    "FacebookLayoutFamilyId": 401,
+    "TemplateId": 401,
+    "FormatId": 6,
+    "ZoneId": 363980
+  },
+  "Modalities": {
+    "layoutId": 0,
+    "colorDispatchId": "forcedDispatch"
+  },
+  "DesignSet": null,
+  "ResponseAsCompleteHtml": true,
+  "ForceCoupon": true,
+  "CouponSet": {
+    "Sizeless": false,
+    "SupportedSizes": [
+      {
+        "width": 160,
+        "height": 600,
+        "IsSizeless": false
+      },
+      {
+        "width": 300,
+        "height": 250,
+        "IsSizeless": false
+      },
+      {
+        "width": 728,
+        "height": 90,
+        "IsSizeless": false
+      },
+      {
+        "width": 320,
+        "height": 50,
+        "IsSizeless": false
+      },
+      {
+        "width": 320,
+        "height": 480,
+        "IsSizeless": false
+      },
+      {
+        "width": 480,
+        "height": 320,
+        "IsSizeless": false
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "IsSizeless": false
+      },
+      {
+        "width": 360,
+        "height": 640,
+        "IsSizeless": false
+      },
+      {
+        "width": 640,
+        "height": 360,
+        "IsSizeless": false
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "IsSizeless": false
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "IsSizeless": false
+      }
+    ],
+    "TimeBetweenSlides": 0,
+    "LogoSwap": false,
+    "NbLoops": 0,
+    "AllowClickThrough": false,
+    "Slides": null,
+    "SizefullSlides": null,
+    "Id": null,
+    "Aliases": {
+      "cpn_lg_swap": "false",
+      "cpn_lg_duration": "3000",
+      "cpn_nb_loop": "-1",
+      "cpn_click_through": "false"
+    },
+    "AliasesByFormat": {
+      "2": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/82f7ea356976489485515d08ab756f14_cpn_160x600_1.jpg",
+          "http://static.criteo.net/design/dt/2603/161018/f63f48feb23f4a14b2eb50dcb1ffb414_cpn_160x600_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000",
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "6": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/34a8dcfdb85240c59fce86537e41d2e0_cpn_300x250_1.jpg",
+          "http://static.criteo.net/design/dt/2603/161018/55580ccb2acc42558d9fd6989c669054_cpn_300x250_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000",
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "8": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/cc5f9dcfba864d298ee29613866c554e_cpn_728x90_1.jpg",
+          "http://static.criteo.net/design/dt/2603/161018/e9cad317c4a14793b5840f9f5799399c_cpn_728x90_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000",
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "48": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/6208d19bc5614515a8c174e4a7aa238e_cpn_320x50_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "71": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/fa4a7d42d6fa4b5aa3bf55c7804ab9e0_cpn_320x480_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "72": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/38a702196a94499aaa33e69d6a18ceb4_cpn_480x320_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "73": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/eca4d22a3d7041d5a55945088b71bbd1_cpn_320x568_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "74": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/2c30de056c0c4eb38023cf8efb8b113e_cpn_360x640_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "75": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/ca27acbdc36243bd9a14ee939039b69b_cpn_640x360_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      }
+    }
+  }
+}

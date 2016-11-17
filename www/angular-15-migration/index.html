@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="AngularTemplateQuickApp">
+<head>
+  <title>Angular Template Quick App</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script>
+    angular.module('AngularTemplateQuickApp', []);
+    angular
+        .module('AngularTemplateQuickApp')
+        .directive('myDirective', ['$rootScope', function ($rootScope) {
+          return {
+            restrict: 'E',
+            scope: {
+              mappingCondition: '=',
+              bannerField: '='
+            },
+            controllerAs: 'ctrl',
+            bindToController: true,
+            template: '<div>{{ctrl.someField}}<div>',
+            controller: function () {
+              var that = this;
+
+              that.someField = 'some value for someField'
+            }
+          };
+        }]);
+  </script>
+</head>
+<body>
+<my-directive></my-directive>
+</body>
+</html>

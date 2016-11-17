@@ -1,0 +1,671 @@
+{
+  "Scope": {
+    "PartnerId": 2603,
+    "TemplateId": 401,
+    "FormatId": 6
+  },
+  "DesignSet": {
+    "Aliases": {
+      "altprice": "rrp",
+      "ft": "Trebuchet MS",
+      "title_style": "r",
+      "title_style_o": "r",
+      "descr_style": "r",
+      "descr_style_o": "r",
+      "price_style": "b",
+      "price_style_o": "b",
+      "rrp_style": "r",
+      "rrp_style_o": "r",
+      "lg_privacy": "http://static.criteo.net/images/_logo_privacy/laredoute_fr_logo.jpg"
+    },
+    "AliasesByFormat": {
+      "2": {
+        "lg_pos": "BC"
+      },
+      "6": {
+        "lg_pos": "BC"
+      },
+      "8": {
+        "lg_pos": "RM"
+      },
+      "48": {
+        "lg_pos": "RM"
+      },
+      "71": {
+        "lg_pos": "BC"
+      },
+      "72": {
+        "lg_pos": "BC"
+      },
+      "73": {
+        "lg_pos": "BC"
+      },
+      "74": {
+        "lg_pos": "BC"
+      },
+      "75": {
+        "lg_pos": "RM"
+      },
+      "79": {
+        "lg_pos": "BC"
+      },
+      "80": {
+        "lg_pos": "BC"
+      }
+    },
+    "AliasesByDispatch": {
+      "0": {
+        "c_arrow_bdr_2": "#939393-100",
+        "c_img_bdr_2": "#ffffff-100",
+        "c_arrow_zone_bdr_o_2": "#e9e9e9-100",
+        "c_arrow_bg_2": "#f9f9f9-100",
+        "c_img_bg_2": "#ffffff-000",
+        "c_price_2": "#333333-100",
+        "c_arrow_2": "#939393-100",
+        "c_img_bg_o_2": "#ffffff-000",
+        "c_arrow_bg_o_2": "#f9f9f9-100",
+        "c_bdr_2": "#e9e9e9-100",
+        "c_img_bdr_o_2": "#ffffff-100",
+        "c_txtonimg": "#2e7a94-100",
+        "c_arrow_zone_bdr_2": "#e9e9e9-100",
+        "c_arrow_bdr_o_2": "#fc0361-100",
+        "c_v_bdr": "#2e7a94-100",
+        "c_price_o_2": "#FC0361-100",
+        "c_txtonimg_o": "#2e7a94-100",
+        "c_bdg_bg": "#FC0361-100",
+        "c_bgd_bg_o": "#FC0361-100",
+        "c_cta_bg_2": "#FFFFFF-100",
+        "c_bg_2": "#e9e9e9-080",
+        "c_bg_o_2": "#ffffff-100",
+        "c_cta_bdr_2": "#dbdbdb-100",
+        "c_ss_pv_bg": "#ffffff-080",
+        "c_cta_bg_o_2": "#FC0361-100",
+        "c_cta_bdr_o_2": "#FC0361-100",
+        "c_cta_text_2": "#333333-100",
+        "c_bdr_o_2": "#2e7a94-100",
+        "c_descr_2": "#333333-100",
+        "c_descr_o_2": "#333333-100",
+        "c_rrp_2": "#333333-100",
+        "c_rrp_o_2": "#333333-100",
+        "c_title_2": "#333333-100",
+        "c_title_o_2": "#333333-100",
+        "c_arrow_o_2": "#FC0361-100",
+        "c_bg_bnr": "#ffffff-100",
+        "c_bg_pds": "#ffffff-100",
+        "c_bg_lg": "#ffffff-100",
+        "c_bg_lg_bdr": "#ffffff-100",
+        "c_secondary_bg": "#ffffff-080",
+        "c_sub_title": "#333333-100",
+        "c_sub_title_o": "#333333-100",
+        "c_sub_descr": "#333333-100",
+        "c_sub_descr_o": "#333333-100",
+        "c_price_guide": "#333333-100",
+        "c_price_guide_o": "#333333-100",
+        "c_secondary_price": "#333333-100",
+        "c_secondary_price_o": "#333333-100",
+        "c_terms_condition": "#333333-100",
+        "c_terms_condition_o": "#333333-100",
+        "c_branding_message": "#333333-100",
+        "c_branding_message_o": "#333333-100",
+        "c_telco_internet": "#333333-100",
+        "c_telco_internet_o": "#333333-100",
+        "c_telco_texts": "#333333-100",
+        "c_telco_texts_o": "#333333-100",
+        "c_telco_minutes": "#333333-100",
+        "c_telco_minutes_o": "#333333-100"
+      },
+      "1": {
+        "c_bdg_bg": "#FC0361-100",
+        "c_bgd_bg_o": "#FC0361-100",
+        "c_bdr_o_2": "#2e7a94-100",
+        "c_price_2": "#2e7a94-100",
+        "c_price_o_2": "#ffffff-100",
+        "c_bg_2": "#ebf3f6-080",
+        "c_bg_o_2": "#2e7a94-100",
+        "c_cta_bdr_2": "#ebf3f6-100",
+        "c_cta_bdr_o_2": "#FC0361-100",
+        "c_arrow_bg_2": "#e9e9e9-100",
+        "c_arrow_bg_o_2": "#e9e9e9-100",
+        "c_ss_pv_bg": "#2e7a94-080",
+        "c_bdr_2": "#ebf3f6-100",
+        "c_cta_bg_2": "#2e7a94-100",
+        "c_cta_bg_o_2": "#FC0361-100",
+        "c_cta_text_2": "#ffffff-100",
+        "c_img_bg_2": "#FFFFFF-000",
+        "c_img_bg_o_2": "#FFFFFF-000",
+        "c_img_bdr_2": "#FFFFFF-000",
+        "c_img_bdr_o_2": "#FFFFFF-000",
+        "c_arrow_2": "#939393-100",
+        "c_arrow_bdr_2": "#939393-100",
+        "c_v_bdr": "#181F87-100",
+        "c_title_o_2": "#ffffff-100",
+        "c_descr_o_2": "#ffffff-100",
+        "c_rrp_2": "#2e7a94-100",
+        "c_rrp_o_2": "#ffffff-100",
+        "c_title_2": "#2e7a94-100",
+        "c_descr_2": "#2e7a94-100",
+        "c_arrow_zone_bdr_2": "#e9e9e9-100",
+        "c_arrow_zone_bdr_o_2": "#e9e9e9-100",
+        "c_bg_bnr": "#ffffff-100",
+        "c_bg_pds": "#ffffff-100",
+        "c_bg_lg": "#ffffff-100",
+        "c_bg_lg_bdr": "#ffffff-100",
+        "c_secondary_bg": "#2e7a94-080",
+        "c_sub_title": "#2e7a94-100",
+        "c_sub_title_o": "#ffffff-100",
+        "c_sub_descr": "#2e7a94-100",
+        "c_sub_descr_o": "#ffffff-100",
+        "c_price_guide": "#2e7a94-100",
+        "c_price_guide_o": "#ffffff-100",
+        "c_secondary_price": "#2e7a94-100",
+        "c_secondary_price_o": "#ffffff-100",
+        "c_terms_condition": "#2e7a94-100",
+        "c_terms_condition_o": "#ffffff-100",
+        "c_branding_message": "#2e7a94-100",
+        "c_branding_message_o": "#ffffff-100",
+        "c_telco_internet": "#2e7a94-100",
+        "c_telco_internet_o": "#ffffff-100",
+        "c_telco_texts": "#2e7a94-100",
+        "c_telco_texts_o": "#ffffff-100",
+        "c_telco_minutes": "#2e7a94-100",
+        "c_telco_minutes_o": "#ffffff-100"
+      },
+      "2": {
+        "c_cta_bg_2": "#e30361-100",
+        "c_cta_bg_o_2": "#fc0361-100",
+        "c_cta_bdr_2": "#e30361-100",
+        "c_cta_bdr_o_2": "#fc0361-100",
+        "c_title_2": "#181f87-100",
+        "c_title_o_2": "#181f87-100",
+        "c_descr_2": "#939393-100",
+        "c_descr_o_2": "#939393-100",
+        "c_price_2": "#FC0361-100",
+        "c_price_o_2": "#fc0361-100",
+        "c_rrp_2": "#939393-100",
+        "c_rrp_o_2": "#939393-100",
+        "c_ss_pv_bg": "#ffffff-080",
+        "c_bdr_2": "#f3f3f3-100",
+        "c_bdr_o_2": "#fc0361-100",
+        "c_bdg_bg": "#181f87-100",
+        "c_bgd_bg_o": "#181f87-100",
+        "c_img_bg_2": "#FFFFFF-100",
+        "c_img_bg_o_2": "#FFFFFF-100",
+        "c_img_bdr_2": "#FFFFFF-100",
+        "c_img_bdr_o_2": "#FFFFFF-100",
+        "c_bg_o_2": "#f3f3f3-100",
+        "c_bg_2": "#f3f3f3-100",
+        "c_cta_text_o_2": "#ffffff-100",
+        "c_arrow_bg_2": "#e9e9e9-100",
+        "c_arrow_bg_o_2": "#e9e9e9-100",
+        "c_arrow_zone_bdr_2": "#e9e9e9-100",
+        "c_arrow_zone_bdr_o_2": "#e9e9e9-100",
+        "c_arrow_o_2": "#181f87-100",
+        "c_arrow_bdr_o_2": "#181f87-100",
+        "c_v_bdr": "#181f87-100",
+        "c_arrow_2": "#939393-100",
+        "c_arrow_bdr_2": "#939393-100",
+        "c_bg_bnr": "#ffffff-100",
+        "c_bg_pds": "#ffffff-100",
+        "c_bg_lg": "#ffffff-100",
+        "c_bg_lg_bdr": "#ffffff-100",
+        "c_secondary_bg": "#ffffff-080",
+        "c_sub_title": "#939393-100",
+        "c_sub_title_o": "#939393-100",
+        "c_sub_descr": "#939393-100",
+        "c_sub_descr_o": "#939393-100",
+        "c_price_guide": "#939393-100",
+        "c_price_guide_o": "#939393-100",
+        "c_secondary_price": "#939393-100",
+        "c_secondary_price_o": "#939393-100",
+        "c_terms_condition": "#939393-100",
+        "c_terms_condition_o": "#939393-100",
+        "c_branding_message": "#939393-100",
+        "c_branding_message_o": "#939393-100",
+        "c_telco_internet": "#939393-100",
+        "c_telco_internet_o": "#939393-100",
+        "c_telco_texts": "#939393-100",
+        "c_telco_texts_o": "#939393-100",
+        "c_telco_minutes": "#939393-100",
+        "c_telco_minutes_o": "#939393-100"
+      }
+    },
+    "AliasesByFormatAndDispatch": [
+      {
+        "Format": 6,
+        "Dispatch": 2,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_300x250.png"
+        }
+      },
+      {
+        "Format": 8,
+        "Dispatch": 2,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_728x90.png"
+        }
+      },
+      {
+        "Format": 2,
+        "Dispatch": 2,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_160x600.png"
+        }
+      },
+      {
+        "Format": 48,
+        "Dispatch": 2,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_320x50.png"
+        }
+      },
+      {
+        "Format": 6,
+        "Dispatch": 1,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_300x250.png"
+        }
+      },
+      {
+        "Format": 8,
+        "Dispatch": 1,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_728x90.png"
+        }
+      },
+      {
+        "Format": 2,
+        "Dispatch": 1,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_160x600.png"
+        }
+      },
+      {
+        "Format": 48,
+        "Dispatch": 1,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_320x50.png"
+        }
+      },
+      {
+        "Format": 6,
+        "Dispatch": 0,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_300x250.png"
+        }
+      },
+      {
+        "Format": 8,
+        "Dispatch": 0,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_728x90.png"
+        }
+      },
+      {
+        "Format": 2,
+        "Dispatch": 0,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_160x600.png"
+        }
+      },
+      {
+        "Format": 48,
+        "Dispatch": 0,
+        "Aliases": {
+          "lg": "http://static.criteo.net/design/dt/782/151113/generated_1786280635_320x50.png"
+        }
+      }
+    ],
+    "LayoutsAssign": {
+      "Layouts": [
+        333346,
+        333372,
+        333446,
+        333447,
+        333514,
+        333519,
+        333520,
+        333521,
+        333528,
+        333536,
+        333537,
+        333538,
+        333540,
+        333541,
+        333542,
+        333543,
+        333545,
+        333549
+      ]
+    },
+    "ImageLayoutId": null,
+    "Navigations": [],
+    "ElementColor": {
+      "DispatchIds": [
+        2,
+        1,
+        0
+      ],
+      "Palette": {
+        "NEUTRAL_LIGHT": "ffffff-100",
+        "NEUTRAL_DARK": "181f87-100",
+        "DOM_1": "FC0361-100",
+        "MINOR_2": "ffffff-100",
+        "GRADIENT_DOM_1": "FC0361-100",
+        "NEUTRAL_MEDIUM": "e1e1e1-100"
+      }
+    },
+    "ElementStyle": {
+      "CornerRadiuStyles": [],
+      "GlobalFonts": {
+        "_value": [
+          {
+            "Name": "Trebuchet MS",
+            "Type": "WebSafeFont"
+          }
+        ],
+        "_elementType": 10
+      },
+      "TextStyles": [
+        {
+          "_elementType": 6,
+          "_value": {
+            "fonts": [],
+            "style": [],
+            "hover": [],
+            "applyTextfit": false,
+            "fontSizeAdjustment": "None"
+          }
+        },
+        {
+          "_elementType": 7,
+          "_value": {
+            "fonts": [],
+            "style": [],
+            "hover": [],
+            "applyTextfit": false,
+            "fontSizeAdjustment": "None"
+          }
+        },
+        {
+          "_elementType": 9,
+          "_value": {
+            "fonts": [],
+            "style": [],
+            "hover": [],
+            "applyTextfit": false,
+            "fontSizeAdjustment": "None"
+          }
+        }
+      ],
+      "FillOrFit": {
+        "_value": 0
+      }
+    },
+    "CtaConfigurations": [
+      {
+        "Id": 1050599,
+        "SmallText": "__Compre já__",
+        "MediumText": "__Compre já__",
+        "LargeText": "__Compre já__",
+        "BorderRadius": 0,
+        "ImageOverrideSets": []
+      },
+      {
+        "Id": 1050600,
+        "SmallText": "__Comprar__",
+        "MediumText": "__Comprar__",
+        "LargeText": "__Comprar__",
+        "BorderRadius": 0,
+        "ImageOverrideSets": []
+      },
+      {
+        "Id": 1050601,
+        "SmallText": "__Ver__",
+        "MediumText": "__Ver mais__",
+        "LargeText": "__Ver agora__",
+        "BorderRadius": 0,
+        "ImageOverrideSets": []
+      },
+      {
+        "Id": 1050602,
+        "SmallText": "__Clique__",
+        "MediumText": "__Clique__",
+        "LargeText": "__Clique aqui__",
+        "BorderRadius": 0,
+        "ImageOverrideSets": []
+      },
+      {
+        "Id": 1050603,
+        "SmallText": "__Ver__",
+        "MediumText": "__Ver__",
+        "LargeText": "__Ver__",
+        "BorderRadius": 0,
+        "ImageOverrideSets": []
+      },
+      {
+        "Id": 1050604,
+        "SmallText": "__Compre__",
+        "MediumText": "__Compre__",
+        "LargeText": "__Compre__",
+        "BorderRadius": 0,
+        "ImageOverrideSets": []
+      }
+    ],
+    "LogoConfigurations": [
+      {
+        "Id": 440438,
+        "Shape": 0,
+        "ColorDispatchId": null,
+        "LogoUrl": "http://static.criteo.net/design/dt/782/151113/9eb41f771d3e4dd1884de1e16267bf61_logo_laredoute.png",
+        "LogoPosition": 4,
+        "LogoSize": 0,
+        "InvertedLogoZonePosition": false
+      },
+      {
+        "Id": 440439,
+        "Shape": 2,
+        "ColorDispatchId": null,
+        "LogoUrl": "http://static.criteo.net/design/dt/782/151113/e55e0be62f424794af670ae02042f19f_logo_laredoute.png",
+        "LogoPosition": 4,
+        "LogoSize": 0,
+        "InvertedLogoZonePosition": false
+      }
+    ],
+    "BrandingImages": [],
+    "Sizelessbackgrounds": [],
+    "Sizeless": true,
+    "SupportedSizes": [],
+    "DataMapping": {
+      "TextMappings": {},
+      "ImageMappings": {},
+      "SizelessImageMappings": {}
+    },
+    "Id": 587610,
+    "ContentLayout": {
+      "PriceConfig": {
+        "UseRrp": true,
+        "UseDiscount": true,
+        "PriceDescription": null,
+        "MinDiscount": 5,
+        "PriceFormat": "P PPP,CC U",
+        "DiscountFormat": "-{D}%",
+        "StaticText": null,
+        "DecimalPrecision": 0,
+        "ShowOppositeDiscount": false,
+        "ShowPerTen": false
+      },
+      "ContentLayoutId": 546855,
+      "DescriptionLong": "(|product_description|)",
+      "DescriptionShort": "(|product_description|)",
+      "MessageLong": null,
+      "MessageShort": null,
+      "TitleLong": "(|product_name|)",
+      "TitleShort": "(|product_name|)",
+      "FacebookCta": null
+    }
+  },
+  "ResponseAsCompleteHtml": true,
+  "ForceCoupon": true,
+  "CouponSet": {
+    "Sizeless": false,
+    "SupportedSizes": [
+      {
+        "width": 160,
+        "height": 600,
+        "IsSizeless": false
+      },
+      {
+        "width": 300,
+        "height": 250,
+        "IsSizeless": false
+      },
+      {
+        "width": 728,
+        "height": 90,
+        "IsSizeless": false
+      },
+      {
+        "width": 320,
+        "height": 50,
+        "IsSizeless": false
+      },
+      {
+        "width": 320,
+        "height": 480,
+        "IsSizeless": false
+      },
+      {
+        "width": 480,
+        "height": 320,
+        "IsSizeless": false
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "IsSizeless": false
+      },
+      {
+        "width": 360,
+        "height": 640,
+        "IsSizeless": false
+      },
+      {
+        "width": 640,
+        "height": 360,
+        "IsSizeless": false
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "IsSizeless": false
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "IsSizeless": false
+      }
+    ],
+    "TimeBetweenSlides": 0,
+    "LogoSwap": false,
+    "NbLoops": 0,
+    "AllowClickThrough": false,
+    "Slides": null,
+    "SizefullSlides": null,
+    "Id": null,
+    "Aliases": {
+      "cpn_lg_swap": "false",
+      "cpn_lg_duration": "3000",
+      "cpn_nb_loop": "-1",
+      "cpn_click_through": "false"
+    },
+    "AliasesByFormat": {
+      "2": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/82f7ea356976489485515d08ab756f14_cpn_160x600_1.jpg",
+          "http://static.criteo.net/design/dt/2603/161018/f63f48feb23f4a14b2eb50dcb1ffb414_cpn_160x600_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000",
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "6": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/34a8dcfdb85240c59fce86537e41d2e0_cpn_300x250_1.jpg",
+          "http://static.criteo.net/design/dt/2603/161018/55580ccb2acc42558d9fd6989c669054_cpn_300x250_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000",
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "8": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/cc5f9dcfba864d298ee29613866c554e_cpn_728x90_1.jpg",
+          "http://static.criteo.net/design/dt/2603/161018/e9cad317c4a14793b5840f9f5799399c_cpn_728x90_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000",
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "48": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/6208d19bc5614515a8c174e4a7aa238e_cpn_320x50_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "71": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/fa4a7d42d6fa4b5aa3bf55c7804ab9e0_cpn_320x480_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "72": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/38a702196a94499aaa33e69d6a18ceb4_cpn_480x320_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "73": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/eca4d22a3d7041d5a55945088b71bbd1_cpn_320x568_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "74": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/2c30de056c0c4eb38023cf8efb8b113e_cpn_360x640_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      },
+      "75": {
+        "cpn_slide_urls": [
+          "http://static.criteo.net/design/dt/2603/161018/ca27acbdc36243bd9a14ee939039b69b_cpn_640x360_2.jpg"
+        ],
+        "cpn_slide_durations": [
+          "3000"
+        ],
+        "cpn_end_slide": "-1"
+      }
+    }
+  }
+}

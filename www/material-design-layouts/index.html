@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body ng-app="myApp">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script>
+    var app = angular.module('myApp', ['ngMaterial']);
+    app.controller("DemoCtrl", function ($scope) {
+        var that = this;
+        that.test = 'test';
+        that.hours = [];
+        that.dateModel = new Date();
+        for (var i = 0; i < 24; i++) {
+            that.hours.push(i);
+        }
+        $scope.someVarInDemoCtrl = "Some var value in demo controller";
+        console.log("starting demo controller");
+    });
+</script>
+<div style="font-family: monospace; font-size: xx-large; background-color: #00b3ee;"
+     layout="row" layout-align="start center" layout-wrap>
+    <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="start center">
+            THEN&nbsp;
+        </div>
+        <div layout="row" layout-align="start center" layout-wrap>
+            <div layout="row" layout-align="start center" >
+                <div layout="row" layout-align="start center" flex="no-shrink">
+                    CCCCC CCCCC&nbsp;
+                </div>
+                <div layout="row" layout-align="start center">
+                    DDDDD DDDDD&nbsp;
+                </div>
+                <div layout="row" layout-align="start center">
+                    EEEEE EEEEE&nbsp;
+                </div>
+            </div>
+            <div layout="row" layout-align="start center">
+                BBBBBBBBBBB BBBBBBBBBBB&nbsp;
+            </div>
+            <div layout="row" layout-align="start center">
+                AAAAAAAAAAAA AAAAAAAAAA&nbsp;
+            </div>
+            <div layout="row" layout-align="start center">
+                BBBBBBBBBBB BBBBBBBBBBB&nbsp;
+            </div>
+            <div layout="row" layout-align="start center">
+                AAAAAAAAAAAA AAAAAAAAAA&nbsp;
+            </div>
+            <div layout="row" layout-align="start center">
+                BBBBBBBBBBBB BBBBBBBBBB&nbsp;
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
