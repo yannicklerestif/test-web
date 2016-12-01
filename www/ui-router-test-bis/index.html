@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+  <script>
+    var app = angular.module('myApp', ['ui.router']);
+    app.config(function ($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise('/home');
+
+      $stateProvider
+          .state('home', {
+            url: '/home',
+            resolve: {
+              myParam: function() {
+                console.log('resolving state "home"');
+                return 'nested';
+              }
+            },
+            template: `
+              home template <br>
+              <h2>Below is the nested template :</h2>
+              <ui-view></ui-view>
+              <a ui-sref=".nested">click to access home.nested</a><br>
+              <a ui-sref="home">click to go back to state 'home'</a>
+            `,
+            controller: 'HomeCtrl as home'
+          })
+          .state('home.nested', {
+            url: '/nested',
+            resolve: {
+              myParam: function() {
+                console.log('resolving state "nested"');
+                throw new Error('An exception occurred while resolving nested state');
+                return 'nested';
+              }
+            },
+            views: {
+              '': {
+                template: `nested template
+                <div ui-view="my-named-view"></div>
+                <div ui-view="my-other-named-view"></div>`
+              },
+              'my-named-view@home.nested': {
+                template: 'my named view'
+              },
+              'my-other-named-view@home.nested': {
+                template: 'my other named view'
+              }
+            }
+          });
+    });
+
+    app.controller("MainCtrl", function ($rootScope, $log) {
+      this.someVarInMainCtrl = "Some var value in demo controller";
+      console.log("starting main controller");
+      $rootScope.$on('$stateChangeError',
+          function(event, toState, toParams, fromState, fromParams, error){
+            $log.error('An error occurred transitioning to ' + toState.name + ' from ' + fromState.name + '. State details: ');
+            $log.error(toState);
+            $log.error('test', error);
+          });
+    });
+    app.controller("HomeCtrl", function () {
+      console.log("starting home controller");
+      var vm = this;
+      vm.someText = new Date() + '';
+    });
+    app.factory("myService", function($q) {
+      var vm = this;
+      vm.resolve = function(stateName) {
+        var deferred = $q.defer();
+        deferred.resolved('some value');
+        console.log('resolving dependencies for state : ' + stateName);
+        return deferred.promise;
+      };
+    })
+  </script>
+
+</head>
+<body ng-controller="MainCtrl as mainCtrl">
+This is the main page. <br>
+<span style="font-family:monospace">mainCtrl.someVarInMainCtrl</span> contains "{{mainCtrl.someVarInMainCtrl}}".<br>
+<h1>Below is the home template :</h1>
+<ui-view></ui-view>
+</body>
+</html>
