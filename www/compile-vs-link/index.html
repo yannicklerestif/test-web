@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../lib/angular.js"></script>
+  <script src="../lib/angular-ui-router.js"></script>
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller("Controller", function ($scope) {
+      $scope.someVarInDemoCtrl = "Some var value in demo controller";
+      console.log("starting Controller");
+    });
+
+    app.directive("myCompilingDirective", function($compile) {
+      return {
+        link: function fnLink(scope, element, iAttrs, controller) {
+          var compiled = $compile('<my-other-directive></my-other-directive>')(scope);
+          element.append(compiled);
+        }
+      }
+    });
+
+    app.directive("myDirective", function() {
+      return {
+        compile: function compile(tElement, tAttrs, transclude) {
+          console.log('compiling');
+          tElement.text('<my-other-directive></my-other-directive>');
+          return function linkFn(scope, lElement, lAttrs, controller) {
+            console.log('linking');
+            lElement.text('<my-other-directive></my-other-directive>');
+          };
+        }
+      }
+    });
+
+    app.directive("myOtherDirective", function() {
+      return {
+        template: "this is my other directive"
+      }
+    });
+
+  </script>
+
+</head>
+<body ng-controller="Controller">
+  <my-directive ng-repeat="i in [0,1]">some text</my-directive>
+  <my-directive>some more text</my-directive>
+  <my-other-directive></my-other-directive>
+  <br><br><br>
+  <my-compiling-directive>test</my-compiling-directive>
+</body>
+</html>
